@@ -50,6 +50,8 @@ class MyHomePage extends StatefulWidget {
 
   final String title;
 
+
+
   @override
   State<MyHomePage> createState() => _MyHomePageState();
 }
@@ -112,14 +114,25 @@ class _MyHomePageState extends State<MyHomePage> {
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
+             ElevatedButton(
+              onPressed: (){
+                print('Pressed');
+              },
+              child: Text('Boton'),
+            ),
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
+     /* floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),*/ // This trailing comma makes auto-formatting nicer for build methods.
+      floatingActionButton: FloatingActionButton(
+        onPressed: null,
+        tooltip: 'Pensando que hacer con esto',
+        child: const Icon(Icons.favorite),
+      ),
     );
   }
 }
